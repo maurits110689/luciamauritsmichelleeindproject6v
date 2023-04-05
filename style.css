@@ -1,0 +1,32 @@
+body
+{
+	width: 342px;
+	font-family: 'Bowlby One SC', cursive;
+	margin: auto;
+}
+
+#pacman {
+  width: 342px;
+  margin: 20px auto;
+}
+
+.pacman-game 
+{
+	margin-top: 3rem;
+	font-size: 2rem;
+	font-family: 'Bowlby One SC', cursive;
+	color: gold;
+	text-align: center;
+}
+
+html {
+  background: black;
+}
+
+canvas {
+  font-family: 'Bowlby One SC', cursive;
+}
+
+a {
+  text-decoration: none;
+}
