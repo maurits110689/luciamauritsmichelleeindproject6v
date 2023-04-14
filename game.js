@@ -7,7 +7,7 @@ function setup() {
 }
 
 Game.prototype.initialize = function() {
-	this.player = new Player(this, this.map);
+  this.player = new Player(this, this.map);
 
 	this.ghostColors = [
 		"green",
