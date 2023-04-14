@@ -19,14 +19,6 @@ body
 	text-align: center;
 }
 
-html {
-  background-image: url("img/background.jpg");
-}
-
-canvas {
-  font-family: 'Bowlby One SC', cursive;
-}
-
 a {
   text-decoration: none;
 }

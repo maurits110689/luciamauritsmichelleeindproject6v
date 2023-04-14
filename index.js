@@ -1,5 +1,3 @@
-/* Afgewerkt */
-
 const Ghost = window.Ghost;
 const Player = window.Player;
 const Game = window.Game;
