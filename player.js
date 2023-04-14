@@ -1,5 +1,5 @@
 Player.prototype.reset = function() {
-  this.score = 0;
+	this.score = 0;
 	this.lives = 1;
 	this.eaten = 0;
 	this.resetPlayerPosition();
@@ -11,7 +11,7 @@ Player.prototype.newLevel = function() {
 };
 
 Player.prototype.resetPlayerPosition = function() {
-  this.position = {
+	this.position = {
 		x: 90,
 		y: 120,
 	};

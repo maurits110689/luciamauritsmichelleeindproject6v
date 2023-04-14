@@ -1,6 +1,6 @@
 body
 {
-	width: 342px;
+  width: 342px;
 	font-family: 'Bowlby One SC', cursive;
 	margin: auto;
 }
@@ -12,7 +12,7 @@ body
 
 .pacman-game 
 {
-	margin-top: 3rem;
+  margin-top: 3rem;
 	font-size: 2rem;
 	font-family: 'Bowlby One SC', cursive;
 	color: gold;
@@ -20,7 +20,7 @@ body
 }
 
 html {
-  background: black;
+  background-image: url("img/background.jpg");
 }
 
 canvas {

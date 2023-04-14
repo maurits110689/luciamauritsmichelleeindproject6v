@@ -3,9 +3,8 @@
 		- een nieuwe speler wordt gekoppeld aan het Game-object en de map van het Game-object
 		- de kleuren van de ghosts worden ingesteld.
 */
-
 Game.prototype.initialize = function() {
-  this.player = new Player(this, this.map);
+	this.player = new Player(this, this.map);
 
 	this.ghostColors = [
 		"green",
