@@ -2,6 +2,10 @@ function preload() {
   bg = loadImage('img/Spelscherm.jpg')
 }
 
+function setup() {
+  createCanvas(1128, 790)
+}
+
 Game.prototype.initialize = function() {
 	this.player = new Player(this, this.map);
 
@@ -22,7 +26,7 @@ Game.prototype.initialize = function() {
 Game.prototype.startNewGame = function() {
   if (!this.bezig) {
     this.setState(STATES.WAITING);
-    this.level = 5;
+    this.level = 1;
     this.player.reset();
     this.startLevel()
     this.bezig = true;
@@ -36,7 +40,7 @@ Game.prototype.startLevel = function() {
   for (let i = 0; i < this.level; i++) {
     let kleur = this.ghostColors[Math.floor(Math.random() * this.ghostColors.length)]
     let ghost = new Ghost(this, this.map, kleur)
-    ghost.speed = 0.02 * this.level
+    ghost.speed = 0.05 * this.level + 0.5;
     this.ghosts.push(ghost)
   }
 	this.timerStart = this.tick;
@@ -54,7 +58,6 @@ Game.prototype.loseLife = function() {
 };
 
 Game.prototype.completedLevel = function() {
-  background(bg);
   this.setState(STATES.WAITING);
 	this.level = this.level + 1;
   this.startLevel()
