@@ -1,6 +1,12 @@
 function preload() {
+  soundFormats('m4a', 'mp3', 'ogg')
   bg = loadImage('img/Spelscherm.jpg')
+  clock = loadSound('music/clock.mp3')
 }
+
+var clock = new Audio('music/clock.mp3');
+var fail = new Audio('music/fail.mp3');
+var levelup = new Audio('music/levelup.mp3');
 
 function setup() {
   createCanvas(1128, 790)
@@ -45,13 +51,15 @@ Game.prototype.startLevel = function() {
   }
 	this.timerStart = this.tick;
 	this.setState(STATES.COUNTDOWN);
+  clock.play();
 };
 
 Game.prototype.loseLife = function() {
-	this.setState(STATES.WAITING);
+  fail.play();
+  this.setState(STATES.WAITING);
   this.player.loseLife()
   if (this.player.getLives() > 0) {
-    this.startLevel()
+    this.startLevel();
   } else {
     this.bezig = false;
   }
@@ -60,5 +68,6 @@ Game.prototype.loseLife = function() {
 Game.prototype.completedLevel = function() {
   this.setState(STATES.WAITING);
 	this.level = this.level + 1;
+  levelup.play();
   this.startLevel()
 };
